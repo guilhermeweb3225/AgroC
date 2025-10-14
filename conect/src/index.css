@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=BBH+Sans+Bartle&family=Bungee&display=swap');
+:root {
+  --font-primary: "Bungee", sans-serif;
+  --font-secondary: "Bungee", cursive;
+
+  /* 🌿 Paleta Natureza Inteligente */
+  --color-primary: #000000;      /* Verde oliva - cor principal */
+  --color-secondary: #9FE870;    /* Verde-limão - destaques e botões */
+  --color-accent: #8D6E63;       /* Marrom terroso - detalhes e ícones */
+  --color-background: #FAF9F6;   /* Branco quente - fundo */
+  --color-text: #424242;         /* Cinza metálico - texto principal */
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
