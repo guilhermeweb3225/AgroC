@@ -1,9 +1,10 @@
+import "./cabeca.css";
 import { Link } from "react-router-dom";
-import "./cabeça.css";
 import Logo from "../images/logo1.png";
 
 function Header() {
   return (
+    <>
     <header className="header">
       <div className="container">
         <div className="logo">
@@ -29,6 +30,7 @@ function Header() {
         </a>
       </div>
     </header>
+    </>
   );
 }
 

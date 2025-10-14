@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./header/cabeça.jsx";
-import Inicio from "./pages/inicio";
+import Header from "./header/cabeca.jsx";
+import Inicio from "./pages/inicio.jsx";
 import Sobre from "./pages/sobre.jsx";
 function App() {
   return (
