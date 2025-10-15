@@ -76,10 +76,10 @@
 }
 
 .btn-hero:hover {
-  background-color: #9FE870;
-  color: #0D0D0D;
+  background-color: #000000;
+  color: #ffffff;
   transform: scale(1.07);
-  border: 2px solid #FFD166;
+  border: 2px solid #0b3600;
 }
 
 /* ============================= */
@@ -107,8 +107,9 @@
 }
 
 .card {
+  filter: drop-shadow(0 0 10px red);
   background-color: #1B4332;
-  color: #fff;
+  color: #000000;
   border-radius: 15px;
   width: 300px;
   padding: 2rem;
@@ -118,9 +119,10 @@
 }
 
 .card:hover {
-  background-color: #74C69D;
-  color: #0D0D0D;
+  background-color: #ffffff;
+  color: #ffffff;
   transform: translateY(-10px);
+  filter: drop-shadow(0 0 20px rgb(0, 107, 0));
 }
 
 .card img {
@@ -136,7 +138,7 @@
 
 .card p {
   font-size: 1rem;
-  color: #EAEAEA;
+  color: #ffffff ;
   line-height: 1.6;
 }
 
