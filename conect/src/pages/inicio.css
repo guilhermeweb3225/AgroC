@@ -1,107 +1,185 @@
-.sobre {
-  padding: 7rem 2rem 4rem;
-  background:linear-gradient(to top ,var(--color-primary),var(--color-secondary),white,white);
-  color: var(--color-text);
-  font-family: var(--font-secondary);
+/* ============================= */
+/* SEÇÃO INÍCIO - HERO */
+/* ============================= */
+
+.inicio {
+  width: 100%;
+  overflow: hidden;
+  background-color: #0D0D0D;
 }
 
-.sobre-container {
+/* Fundo com vídeo */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
-  gap: 2rem;
-}
-
-.sobre-texto {
-  flex: 1 1 500px;
-}
-
-.sobre-texto h1 {
-  font-family: var(--font-primary);
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: var(--color-primary);
-}
-
-.sobre-texto h1 span {
-  color: var(--color-secondary);
-}
-
-.sobre-texto p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
-}
-
-.sobre-imagem {
-  flex: 1 1 400px;
-}
-
-.sobre-imagem img {
-  width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-}
-
-/* Cards (Missão, Visão, Valores) */
-.missao-visao-valores {
-  margin-top: 5rem;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 25, 15, 0.75); /* Verde escuro translúcido */
+  z-index: 2;
+}
+
+/* Conteúdo principal */
+.hero-content {
+  max-width: 800px;
+  padding: 2rem;
+  animation: fadeIn 1.8s ease-in-out;
+  z-index: 3;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #9FE870; /* Verde-limão moderno */
+  text-shadow: 0 0 15px rgba(159, 232, 112, 0.5);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #EAEAEA;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+/* Botão principal */
+.btn-hero {
+  background-color: #3B7A57;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-hero:hover {
+  background-color: #9FE870;
+  color: #0D0D0D;
+  transform: scale(1.07);
+  border: 2px solid #FFD166;
+}
+
+/* ============================= */
+/* SEÇÃO BENEFÍCIOS */
+/* ============================= */
+
+.beneficios {
+  background-color: #FAF9F6;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.beneficios h2 {
+  color: #3B7A57;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
 .card {
-  background-color: white;
+  background-color: #1B4332;
+  color: #fff;
   border-radius: 15px;
+  width: 300px;
   padding: 2rem;
-  max-width: 340px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  animation: fadeInUp 1s ease;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  background-color: #74C69D;
+  color: #0D0D0D;
+  transform: translateY(-10px);
 }
 
 .card img {
-  width: 100%;
-  border-radius: 10px;
-  margin-bottom: 1rem;
+  width: 70px;
+  margin-bottom: 1.2rem;
 }
 
-.card h2 {
-  color: var(--color-primary);
-  font-family: var(--font-primary);
-  margin-bottom: 0.5rem;
+.card h3 {
+  color: #FFD166;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
 }
 
 .card p {
   font-size: 1rem;
-  color: var(--color-text);
-  line-height: 1.5;
+  color: #EAEAEA;
+  line-height: 1.6;
 }
 
-/* Responsividade */
-@media (max-width: 992px) {
-  .sobre-container {
-    flex-direction: column;
-    text-align: center;
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+@media (max-width: 900px) {
+  .hero-content h1 {
+    font-size: 2.3rem;
   }
 
-  .sobre-imagem img {
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .card {
     width: 90%;
-    margin: 0 auto;
   }
+}
 
-  .missao-visao-valores {
-    flex-direction: column;
-    align-items: center;
+/* ============================= */
+/* ANIMAÇÕES */
+/* ============================= */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

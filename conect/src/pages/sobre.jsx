@@ -1,6 +1,7 @@
 
 import "./sobre.css";
-
+import Img2 from "../images/imgtecCamp.png";
+import Img3 from "../images/imgValores.png";
 function Sobre() {
   return (
     <section className="sobre">
@@ -32,7 +33,7 @@ function Sobre() {
       <div className="missao-visao-valores">
         <div className="card">
           <img
-            src="https://images.unsplash.com/photo-1591448770228-30b41b6c4e26?auto=format&fit=crop&w=1000&q=80"
+            src={Img2}
             alt="Conexão no campo"
           />
           <h2>Missão</h2>
@@ -56,7 +57,7 @@ function Sobre() {
 
         <div className="card">
           <img
-            src="https://images.unsplash.com/photo-1590487988254-3a9d0b98f6d9?auto=format&fit=crop&w=1000&q=80"
+            src={Img3}
             alt="Valores AgroConnect"
           />
           <h2>Valores</h2>
