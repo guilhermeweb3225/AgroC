@@ -1,6 +1,6 @@
 
 import "./inicio.css";
-import Vd from "../images/vd.mp4";
+import Vd from "../images/vd3.mp4";
 function Inicio() {
   return (
     <section className="inicio">
