@@ -1,6 +1,6 @@
-/* SOBRE - ESTILO UNIFICADO COM COMO FUNCIONA E CONTATOS */
+/* comofunciona.css */
 
-.sobre {
+.comofunciona {
   position: relative;
   width: 100%;
   padding: 0;
@@ -8,7 +8,7 @@
   font-family: 'Poppins', sans-serif;
 }
 
-.sobre-bg {
+.funciona-bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -18,14 +18,14 @@
   overflow: hidden;
 }
 
-.sobre-bg img {
+.funciona-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: brightness(0.5);
 }
 
-.sobre-overlay {
+.funciona-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -35,7 +35,7 @@
   z-index: 1;
 }
 
-.sobre-content {
+.funciona-content {
   position: relative;
   z-index: 2;
   padding: 100px 20px;
@@ -45,14 +45,14 @@
 }
 
 /* INTRO */
-.sobre-intro h2 {
+.funciona-intro h2 {
   font-size: 2.8rem;
   font-weight: 700;
   color: #A2F5A2;
   margin-bottom: 20px;
 }
 
-.sobre-intro p {
+.funciona-intro p {
   font-size: 1.1rem;
   line-height: 1.8;
   color: #eee;
@@ -60,16 +60,16 @@
   text-align: justify;
 }
 
-/* CARDS DE MISSÃO, VISÃO, VALORES */
-.sobre-detalhes {
+/* CARDS */
+.funciona-cards {
   display: flex;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
-  margin-bottom: 60px;
+  margin: 60px 0;
 }
 
-.sobre-card {
+.funciona-card {
   background: rgba(255, 255, 255, 0.1);
   padding: 35px 25px;
   border-radius: 15px;
@@ -80,66 +80,30 @@
   color: #fff;
 }
 
-.sobre-card:hover {
+.funciona-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
 }
 
-.sobre-card h3 {
+.funciona-card img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.funciona-card h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
   color: #A2F5A2;
 }
 
-.sobre-card p {
+.funciona-card p {
   font-size: 1rem;
   color: #f0f0f0;
   line-height: 1.6;
 }
 
-/* PARCERIAS */
-.sobre-parcerias {
-  margin-bottom: 60px;
-}
-
-.sobre-parcerias h3 {
-  font-size: 2rem;
-  color: #A2F5A2;
-  margin-bottom: 20px;
-}
-
-.sobre-parcerias p {
-  font-size: 1.05rem;
-  color: #eee;
-  margin-bottom: 35px;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.7;
-  text-align: center;
-}
-
-.logos-parcerias {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  flex-wrap: wrap;
-}
-
-.logos-parcerias img {
-  height: 60px;
-  object-fit: contain;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-
-.logos-parcerias img:hover {
-  transform: scale(1.1);
-  filter: brightness(1.3);
-}
-
-/* CTA FINAL */
-.sobre-cta {
+/* CTA */
+.funciona-cta {
   background: rgba(46, 139, 87, 0.85);
   color: #fff;
   padding: 60px 20px;
@@ -148,19 +112,19 @@
   margin-top: 60px;
 }
 
-.sobre-cta h3 {
+.funciona-cta h3 {
   font-size: 2rem;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
-.sobre-cta p {
+.funciona-cta p {
   font-size: 1.15rem;
   margin-bottom: 25px;
   line-height: 1.6;
 }
 
-.btn-sobre {
+.btn-funciona {
   display: inline-block;
   background: #fff;
   color: #2E8B57;
@@ -171,49 +135,40 @@
   transition: all 0.3s ease;
 }
 
-.btn-sobre:hover {
+.btn-funciona:hover {
   background: #e0e0e0;
   transform: translateY(-3px);
 }
 
 /* RESPONSIVIDADE */
 @media (max-width: 992px) {
-  .sobre-detalhes {
+  .funciona-cards {
     flex-direction: column;
     align-items: center;
     gap: 25px;
   }
 
-  .logos-parcerias img {
-    height: 50px;
-  }
-
-  .sobre-card {
+  .funciona-card {
     width: 90%;
   }
 }
 
 @media (max-width: 480px) {
-  .sobre-intro h2 {
+  .funciona-intro h2 {
     font-size: 2rem;
   }
 
-  .sobre-parcerias h3 {
-    font-size: 1.6rem;
+  .funciona-card h3 {
+    font-size: 1.4rem;
   }
 
-  .sobre-cta h3 {
-    font-size: 1.6rem;
-  }
-
-  .sobre-intro p,
-  .sobre-card p,
-  .sobre-parcerias p,
-  .sobre-cta p {
+  .funciona-intro p,
+  .funciona-card p,
+  .funciona-cta p {
     font-size: 0.95rem;
   }
 
-  .btn-sobre {
+  .btn-funciona {
     padding: 12px 30px;
   }
 }

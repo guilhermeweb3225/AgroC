@@ -1,187 +1,297 @@
-/* ============================= */
-/* SEÇÃO INÍCIO - HERO */
-/* ============================= */
+/* inicio.css */
+
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
 .inicio {
   width: 100%;
-  overflow: hidden;
-  background-color: #0D0D0D;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-/* Fundo com vídeo */
+/* ===== HERO ===== */
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   color: #fff;
+  text-align: center;
+  overflow: hidden;
 }
 
-.background-video {
+.hero .background-video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: 1;
+  z-index: 0;
 }
 
-.overlay {
+.hero .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(10, 25, 15, 0.75); /* Verde escuro translúcido */
-  z-index: 2;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
 }
 
-/* Conteúdo principal */
 .hero-content {
-  max-width: 800px;
-  padding: 2rem;
-  animation: fadeIn 1.8s ease-in-out;
-  z-index: 3;
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  padding: 0 20px;
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  color: #9FE870; /* Verde-limão moderno */
-  text-shadow: 0 0 15px rgba(159, 232, 112, 0.5);
-  margin-bottom: 1rem;
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
   font-weight: 700;
 }
 
 .hero-content p {
   font-size: 1.2rem;
-  color: #EAEAEA;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
   line-height: 1.6;
 }
 
-/* Botão principal */
 .btn-hero {
-  background-color: #3B7A57;
+  display: inline-block;
+  background: #2E8B57;
   color: #fff;
-  padding: 0.9rem 2rem;
-  border-radius: 10px;
+  padding: 16px 40px;
+  border-radius: 50px;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
+  margin-top: 20px;
 }
 
 .btn-hero:hover {
-  background-color: #000000;
-  color: #ffffff;
-  transform: scale(1.07);
-  border: 2px solid #0b3600;
+  background: #246b45;
+  transform: translateY(-3px);
 }
 
-/* ============================= */
-/* SEÇÃO BENEFÍCIOS */
-/* ============================= */
-
-.beneficios {
-  background-color: #FAF9F6;
+/* ===== MISSÃO, VISÃO E VALORES ===== */
+.missao-visao-valores {
+  padding: 100px 20px;
+  background: #f8f9fa;
   text-align: center;
-  padding: 5rem 2rem;
+}
+
+.missao-visao-valores h2 {
+  font-size: 2.4rem;
+  margin-bottom: 60px;
+  color: #333;
+}
+
+.mvv-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.mvv-card {
+  background: #fff;
+  padding: 35px 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mvv-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.mvv-card h3 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #2E8B57;
+}
+
+.mvv-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== BENEFÍCIOS ===== */
+.beneficios {
+  padding: 100px 20px;
+  background: #fff;
+  text-align: center;
 }
 
 .beneficios h2 {
-  color: #3B7A57;
-  font-size: 2rem;
-  margin-bottom: 3rem;
-  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 60px;
+  color: #333;
 }
 
 .cards {
   display: flex;
   justify-content: center;
+  gap: 40px;
   flex-wrap: wrap;
-  gap: 2rem;
 }
 
 .card {
-  filter: drop-shadow(0 0 10px red);
-  background-color: #1B4332;
-  color: #000000;
+  background: #f0f4f7;
   border-radius: 15px;
-  width: 300px;
-  padding: 2rem;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
-  transition: all 0.3s ease;
-  animation: fadeInUp 1s ease;
+  padding: 30px 25px;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  background-color: #ffffff;
-  color: #ffffff;
   transform: translateY(-10px);
-  filter: drop-shadow(0 0 20px rgb(0, 107, 0));
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .card img {
   width: 70px;
-  margin-bottom: 1.2rem;
+  margin-bottom: 20px;
 }
 
 .card h3 {
-  color: #FFD166;
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: #2E8B57;
 }
 
 .card p {
   font-size: 1rem;
-  color: #ffffff ;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ===== CHAMADA EXTRA ===== */
+.chamada-extra {
+  padding: 100px 20px;
+  background: #2E8B57;
+  color: #fff;
+  text-align: center;
+}
+
+.chamada-extra h2 {
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+}
+
+.chamada-extra p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
   line-height: 1.6;
 }
 
-/* ============================= */
-/* RESPONSIVIDADE */
-/* ============================= */
+/* ===== APOIADORES ===== */
+.apoiadores {
+  padding: 80px 20px;
+  background: #f1f5f8;
+  text-align: center;
+}
 
-@media (max-width: 900px) {
+.apoiadores h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #2E8B57;
+}
+
+.apoiadores p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #555;
+}
+
+.logos-apoiadores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.logos-apoiadores img {
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.logos-apoiadores img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.3);
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 1200px) {
   .hero-content h1 {
-    font-size: 2.3rem;
+    font-size: 2.8rem;
   }
+  .hero-content p {
+    font-size: 1.15rem;
+  }
+  .cards, .mvv-cards {
+    gap: 30px;
+  }
+}
 
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
   .hero-content p {
     font-size: 1.1rem;
   }
+  .logos-apoiadores {
+    gap: 40px;
+  }
+}
 
-  .card {
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .cards, .mvv-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card, .mvv-card {
     width: 90%;
   }
-}
-
-/* ============================= */
-/* ANIMAÇÕES */
-/* ============================= */
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .logos-apoiadores img {
+    height: 50px;
   }
 }
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+  .btn-hero {
+    padding: 12px 30px;
+  }
+  .logos-apoiadores img {
+    height: 40px;
   }
 }
