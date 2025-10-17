@@ -1,5 +1,5 @@
-import "./inicio.css"; 
-import Vd from "../images/vd3.mp4";
+import "./inicio.css";
+import Vdo from "../images/Vd3.mp4";
 import Agilidade from "../images/imgagilidade.png";
 import Tecnologia from "../images/imgtecnologia.png";
 import Conexao from "../images/imgconexao.png";
@@ -13,7 +13,7 @@ function Inicio() {
       <div className="hero">
         <div className="overlay"></div>
         <video autoPlay muted loop playsInline className="background-video">
-          <source src={Vd} type="video/mp4" />
+          <source src={Vdo} type="video/mp4" />
         </video>
 
         <div className="hero-content">
