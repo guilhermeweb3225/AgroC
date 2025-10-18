@@ -1,7 +1,22 @@
+import React, { useState } from "react";
 import "./contato.css";
-import BgContatos from "../images/senar.png"; // imagem de fundo
+import BgContatos from "../images/apertofundo.png"; // imagem de fundo
 
 function Contatos() {
+  const [nome, setNome] = useState("");
+  const [email, setEmail] = useState("");
+  const [mensagem, setMensagem] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // impede o reload da página
+
+    const telefone = "5565992807604"; // seu número completo com DDI + DDD
+    const texto = `Olá! 👋\nMeu nome é ${nome}\nEmail: ${email}\nMensagem: ${mensagem}`;
+    const url = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, "_blank"); // abre o WhatsApp
+  };
+
   return (
     <section className="contatos">
       {/* Background e overlay */}
@@ -21,29 +36,63 @@ function Contatos() {
         <div className="contatos-info">
           <div className="info-card">
             <h3>WhatsApp</h3>
-            <p><a href="https://wa.me/SEUNUMERO" target="_blank" rel="noopener noreferrer">+55 11 99999-9999</a></p>
+            <p>
+              <a
+                href="https://wa.me/5565992807604"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                +55 65 99280-7604
+              </a>
+            </p>
           </div>
           <div className="info-card">
             <h3>E-mail</h3>
-            <p><a href="mailto:contato@agroconnect.com.br">contato@agroconnect.com.br</a></p>
+            <p>
+              <a href="mailto:agroconect190@gmail.com">
+                agroconect190@gmail.com
+              </a>
+            </p>
           </div>
           <div className="info-card">
             <h3>Telefone</h3>
-            <p><a href="tel:+551199999999">+55 11 99999-9999</a></p>
+            <p>
+              <a href="tel:+5565992807604">+55 65 99280-7604</a>
+            </p>
           </div>
           <div className="info-card">
             <h3>Endereço</h3>
-            <p>Rua Exemplo, 123 - São Paulo, SP - Brasil</p>
+            <p>Na palma da sua Mão</p>
           </div>
         </div>
 
         <div className="contatos-form">
           <h3>Envie sua mensagem</h3>
-          <form action="#" method="POST">
-            <input type="text" name="nome" placeholder="Seu nome" required />
-            <input type="email" name="email" placeholder="Seu e-mail" required />
-            <textarea name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
-            <button type="submit" className="btn-contatos">Enviar Mensagem</button>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+              placeholder="Seu nome"
+              required
+            />
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Seu e-mail"
+              required
+            />
+            <textarea
+              rows="5"
+              value={mensagem}
+              onChange={(e) => setMensagem(e.target.value)}
+              placeholder="Sua mensagem"
+              required
+            ></textarea>
+            <button type="submit" className="btn-contatos">
+              Enviar Mensagem
+            </button>
           </form>
         </div>
       </div>

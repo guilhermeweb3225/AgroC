@@ -1,8 +1,8 @@
 import "./comofuncionamds.css";
-import Passo1 from "../images/senar.png";
-import Passo2 from "../images/senar.png";
-import Passo3 from "../images/senar.png";
-import BgFuncionamento from "../images/senar.png"; // imagem de fundo
+import Passo1 from "../images/relogio.png";
+import Passo2 from "../images/conexao.png";
+import Passo3 from "../images/negoentre.png";
+import BgFuncionamento from "../images/fundobg.png"; // imagem de fundo
 
 function ComoFunciona() {
   return (

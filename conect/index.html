@@ -15,5 +15,22 @@
         const locomotiveScroll = new LocomotiveScroll();
     })();
 </script>
+<script>
+  document.getElementById("whatsappForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const mensagem = document.getElementById("mensagem").value;
+
+    // ✅ Seu número em formato internacional: 55 (Brasil) + 65 (DDD) + 9928076
+    const telefone = "55659928076"; // se faltar um dígito, corrija aqui com o número completo
+
+    const texto = `Olá! 👋\nMeu nome é ${nome}\nEmail: ${email}\nMensagem: ${mensagem}`;
+    const url = `https://wa.me/${telefone}?text=${encodeURIComponent(texto)}`;
+
+    window.open(url, "_blank");
+  });
+</script>
   </body>
 </html>

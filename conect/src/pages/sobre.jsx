@@ -3,7 +3,7 @@ import SenarLogo from "../images/senar.png";
 import SlcLogo from "../images/slc.png";
 import Parceria1 from "../images/senar.png"; // Exemplo de outro apoiador
 import Parceria2 from "../images/slc.png";
-import BgSobre from "../images/senar.png";
+import BgSobre from "../images/cptecnolog.png";
 
 function Sobre() {
   return (
