@@ -1,4 +1,4 @@
-import "./comofunciona.css";
+import "./comofuncionamds.css";
 import Passo1 from "../images/senar.png";
 import Passo2 from "../images/senar.png";
 import Passo3 from "../images/senar.png";
